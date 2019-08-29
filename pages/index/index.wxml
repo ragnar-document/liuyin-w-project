@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="page-container">
+  <view class="page-banner-img">
+    <image src="/img/banner.png"></image>
+  </view>
+  <view class="page-card-title">
+    热门课程
+  </view>
+  <navigator class="page-container-card"  wx:for="{{classDetails}}" wx:key="{{classDetails.id}}" 
+ url="/pages/classdetails/details?id={{item.id}}">
+  <view class="page-card-list">
+    <view class="page-card-item">
+      <view class="page-card-item-right">
+        <view class="page-card-item-title">{{item.course_name}}</view>
+        <view class="page-card-item-description">{{item.description}}</view>
+        <view class="page-card-item-price">课程价格:{{item.price}}元</view>
+      </view>
+      <view class="page-card-item-left">
+        <image src="/img/banner1.png"></image>
+      </view>
+    </view>
+  </view> 
+ </navigator>
+</view>

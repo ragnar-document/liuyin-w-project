@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "留音社",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+    "usingComponents": {
+      "i-card": "../../element/card/index"
+    }
+}

@@ -1,0 +1,29 @@
+<!--pages/classdetails/details.wxml-->
+<view class="page-container">
+  <view class="page-banner">
+    <image src="/img/banner.png"></image>
+    <view class="page-class-details">
+      <view class="class-name">班级名称:声乐</view>
+      <view class="class-intro-content">
+        <view class="class-item">课程数量:{{classData.lesson_count}}节</view>
+        <view class="class-item"><i-icon type="group" size="20" color="#80848f" />{{classStudy.length}}人在学</view>
+      </view>
+    </view>
+  </view>
+  <view class="page-main">
+    <view class="page-class-description">课程简介</view>
+    <view class="page-class-description-item">
+     {{classData.description}}
+    </view>
+    <view class="page-class-node">
+      <view>课程列表</view>
+      <view class="page-class-node-item">
+        <navigator wx:for="{{classLess}}" wx:key="{{item.id}}">   
+          <i-cell-group>
+            <i-cell title="第{{item.id}}课" value="查看更多" label="开课时间{{item.start_time}} | 下课时间{{item.end_time}}"></i-cell>
+          </i-cell-group>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

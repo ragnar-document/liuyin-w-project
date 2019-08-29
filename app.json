@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/myself/index",
+    "pages/index/index",
+    "pages/classdetails/details",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "留音社",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+      "color": "#000",
+      "selectedColor": "#000",
+    "list": [
+      {
+        "iconPath": "img/home1.png",
+        "selectedIconPath": "img/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "img/myself1.png",
+        "selectedIconPath": "img/myself.png",
+        "pagePath": "pages/myself/index",
+        "text": "我的主页"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

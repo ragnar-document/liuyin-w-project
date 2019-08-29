@@ -1,0 +1,53 @@
+<!--pages/myself/index.wxml-->
+<view class="page-container">
+  <view class="page-login">
+    <image class="page-login-bg" src="{{userInfo.avatarUrl}}"></image>
+    <view class="page-login-logo">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="page-login-name">
+     <text>{{userInfo.nickName}}</text>
+    </view>
+    <view class="page-login-Model" wx:if="{{loginModel}}">
+      <view class="page-login-Model-main">
+        <form bindsubmit="formSubmit">
+          <text>用户登陆</text>
+          <input 
+          value="" 
+          placeholder="请输入你的手机号" 
+          type="number" 
+          class="model-input"
+          name="input"
+          ></input>
+           <button  
+           class="model-btn" 
+           hover-class="model-btn_hover"
+           open-type="getUserInfo" 
+           form-type="submit" 
+           bindgetuserinfo="onGotUserInfo">登陆</button>  
+        </form>
+      </view>
+    </view>
+  </view>
+  <view class="page-overview">
+    <view class="page-overview-item">
+      <view>3333</view>
+      <view class="sz-sm">消费</view>
+    </view>
+    <view class="page-overview-item">
+      <view>4000</view>
+      <view class="sz-sm">余额</view>
+    </view>
+    <view class="page-overview-item">
+      <view>3</view>
+      <view class="sz-sm">班级</view>
+    </view>
+  </view>
+  <view class="page-Intro-container">
+    <i-cell-group>
+      <i-cell title="我购买的课程" is-link url="/pages/dashboard/index" icon></i-cell>
+      <i-cell title="我的账户" is-link url="/pages/dashboard/index"></i-cell>
+      <i-cell title="我的信息" is-link url="/pages/dashboard/index"></i-cell>
+    </i-cell-group>
+  </view>
+</view>
