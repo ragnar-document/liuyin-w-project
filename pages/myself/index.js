@@ -1,4 +1,6 @@
 // pages/myself/index.js
+import userServe from "../../global/server/userServe"
+
 Page({
 
   /**
@@ -6,8 +8,10 @@ Page({
    */
   data: {
     loginModel:true,
-    userKey:'',
-    userInfo:[]
+    userInfo:[],
+    userId: '',
+    balance: '',
+    userClass:[]
   },
 
   /**
@@ -35,7 +39,7 @@ Page({
         if (res.code) {
           //发起网络请求
           wx.request({
-            url: "http://localhost:4000/api/user",
+            url: "http://localhost:4000/api/wxrequest",
             data: {
               code: res.code,
               userPhone: userPhone
@@ -57,10 +61,11 @@ Page({
                   key: "token",
                   data: res.data.token
                 })
-                console.log(res)
                 _this.setData({
                   loginModel:false,
-                  userKey:true
+                  userId: res.data.userId,
+                  balance: res.data.balance,
+                  userClass: res.data.userClass
                 })
               }
             }
@@ -74,14 +79,20 @@ Page({
   },
   onGotUserInfo: function (e) {
     console.log(this.data.loginModel)
-    if (this.data.loginModel){
-      console.log(e.detail.userInfo)
-      this.setData({
-        userInfo: e.detail.userInfo
-      })
-      return
-    }
+    setTimeout(() => {
+      console.log(this.data.loginModel)
+      if (!this.data.loginModel) {
+        this.setData({
+          userInfo: e.detail.userInfo
+        })
+        return
+      }
+    },1000)
   },
+
+
+
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

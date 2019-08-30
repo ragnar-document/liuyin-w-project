@@ -32,20 +32,24 @@
   <view class="page-overview">
     <view class="page-overview-item">
       <view>3333</view>
-      <view class="sz-sm">消费</view>
+      <view class="sz-sm">暂定</view>
     </view>
+
+      <view class="page-overview-item">
+        <navigator  url="/pages/balance/balance?id={{userId}}" >
+          <view>{{balance}}</view>
+          <view class="sz-sm">余额</view>
+        </navigator>
+      </view>
+      
     <view class="page-overview-item">
-      <view>4000</view>
-      <view class="sz-sm">余额</view>
-    </view>
-    <view class="page-overview-item">
-      <view>3</view>
+      <view>{{userClass.length}}</view>
       <view class="sz-sm">班级</view>
     </view>
   </view>
   <view class="page-Intro-container">
     <i-cell-group>
-      <i-cell title="我购买的课程" is-link url="/pages/dashboard/index" icon></i-cell>
+      <i-cell title="我购买的课程" is-link url="/pages/myclass/index?id={{userId}}" icon></i-cell>
       <i-cell title="我的账户" is-link url="/pages/dashboard/index"></i-cell>
       <i-cell title="我的信息" is-link url="/pages/dashboard/index"></i-cell>
     </i-cell-group>

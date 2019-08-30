@@ -1,0 +1,15 @@
+<!--pages/myclass/index.wxml-->
+<view class="page-container">
+  <view class="page-container-list">
+    <view class="list-item" wx:for="{{userClass}}" wx:key="{{item.id}}">
+      <view class="list-item-banner"><image src="../../img/banner.png"></image></view>
+      <view class="list-item-details">
+        <view class="details-title">{{item.name}}</view>
+        <view class="details-intro">
+          <view class="details-intro-count">课时:{{item.lesson_count}}节</view>
+          <view class="details-intro-price">价格:{{item.price}}元</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/myself/index",
+    "pages/balance/balance",
+    "pages/myclass/index",
     "pages/index/index",
     "pages/classdetails/details",
     "pages/logs/logs"

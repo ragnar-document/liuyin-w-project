@@ -1,0 +1,17 @@
+<!--pages/balance/balance.wxml-->
+<view class="page-container">
+  <view class="page-container-balance">
+    <view class="balance-logo"><image src="../../img/balance.png"></image></view>
+    <view class="balance-title">我的余额</view>
+    <view class="balance-sum"><i>¥</i> {{balance}}</view>
+  </view>
+  <view class="page-container-consume">
+    <view class="consume-item" wx:for="{{balanceInfo}}" wx:key="{{item.id}}">
+      <view>
+        <view class="consum-item-remark">{{item.remark}}</view>
+        <view class="consum-item-time">{{item.created_at}}</view>
+      </view>
+      <view class="consum-item-sum">{{item.total}}元</view>
+    </view>
+  </view>
+</view>

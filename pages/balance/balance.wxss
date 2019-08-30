@@ -1,0 +1,56 @@
+/* pages/balance/balance.wxss */
+.page-container{
+    height: 100%;
+    width: 100%;
+    background-color: #eee;
+}
+.page-container .page-container-balance{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400rpx;
+    width: 100%;
+    margin-bottom: 40rpx;
+    background-color: #fff; 
+}
+.page-container .page-container-balance .balance-logo image{
+    height: 100rpx;
+    width: 100rpx;
+    margin-bottom: 20rpx;
+}
+.page-container .page-container-balance .balance-title{
+    font-size: 22rpx;
+    color: #999;
+}
+.page-container .page-container-balance .balance-sum{
+    position: relative;
+    font-size: 44rpx;
+}
+.page-container .page-container-balance .balance-sum i{
+    position: absolute;
+    font-size: 26rpx;
+    top: 0;
+    left: -20rpx;
+}
+.page-container .page-container-consume{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.page-container .page-container-consume .consume-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx 40rpx;
+    border-bottom: 1px solid #eee;
+}
+
+.page-container .page-container-consume .consume-item .consum-item-time{
+    font-size: 20rpx;
+    color: #999;
+}
+
+.page-container .page-container-consume .consume-item .consum-item-sum {
+    font-size: 38rpx;
+}

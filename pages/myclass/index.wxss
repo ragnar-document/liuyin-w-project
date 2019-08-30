@@ -1,0 +1,56 @@
+/* pages/myclass/index.wxss */
+.page-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40rpx;
+}
+.page-container::after {
+    position: absolute;
+    top: -400rpx;
+    left: 200rpx;
+    content: '';
+    height: 800rpx;
+    width: 800rpx;
+    border-radius: 50%;
+    opacity: 0.3;
+    z-index: -1;
+    background: linear-gradient(to right, rgb(18, 194, 233), rgb(196, 113, 237), rgb(246, 79, 89));
+}
+
+.page-container-list .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 160rpx;
+    width: 80%;
+    z-index: 999;
+    margin: 40rpx 0;
+    padding: 0 40rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+    box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, .3);
+}
+
+.page-container-list .list-item .list-item-banner image {
+    height: 120rpx;
+    width: 200rpx;
+    background-color: darkcyan;
+    border-radius: 10rpx;
+    margin-right: 20rpx; 
+}
+.page-container-list .list-item .list-item-details {
+    width: 70%;
+    text-align: left;
+}
+.page-container-list .list-item .list-item-details .details-intro {
+    display: flex;
+    margin-top: 30rpx; 
+    font-size: 20rpx;
+    color: #999;
+}
+
+ .page-container-list .list-item .list-item-details .details-intro .details-intro-count {
+    margin-right: 40rpx; 
+}
